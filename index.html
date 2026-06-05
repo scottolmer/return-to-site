@@ -24,6 +24,10 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
+          <div class="hero-kicker">
+            <span>Return deadline tracker</span>
+            <span>Local-first MVP</span>
+          </div>
           <p class="eyebrow">Receipt deadlines without the spreadsheet</p>
           <h1 id="hero-title">Return To</h1>
           <p class="lede">Return To helps you catch return windows before they close. Paste, scan, forward, or share receipts into one quiet return queue.</p>
@@ -31,7 +35,31 @@
             <a class="button" href="#privacy">Privacy policy</a>
             <a class="button secondary" href="#support">Get support</a>
           </div>
+          <dl class="hero-stats" aria-label="Return To highlights">
+            <div>
+              <dt>4</dt>
+              <dd>ways to capture a receipt</dd>
+            </div>
+            <div>
+              <dt>0</dt>
+              <dd>ad trackers</dd>
+            </div>
+            <div>
+              <dt>1</dt>
+              <dd>return queue</dd>
+            </div>
+          </dl>
         </div>
+        <aside class="hero-visual" aria-label="Return To app screenshot">
+          <div class="device-frame">
+            <img src="assets/share-import.jpg" alt="Return To capture screen with a shared Target receipt prefilled and parsed.">
+          </div>
+          <div class="receipt-strip" aria-hidden="true">
+            <span>Target</span>
+            <strong>$64.20</strong>
+            <span>Return by Aug 31</span>
+          </div>
+        </aside>
       </section>
 
       <section class="band" id="how" aria-labelledby="how-title">
@@ -40,23 +68,27 @@
           <p>Every receipt import goes through a confirmation step before it becomes a watched return. The app is built to be useful without account setup.</p>
         </div>
         <div class="steps">
-          <article class="step">
+          <article class="step" data-step="01">
             <span class="step-number">01</span>
+            <span class="step-label">Input</span>
             <h3>Capture</h3>
             <p>Paste receipt text, choose a receipt photo, forward an order email, or share receipt text into the app.</p>
           </article>
-          <article class="step">
+          <article class="step" data-step="02">
             <span class="step-number">02</span>
+            <span class="step-label">Review</span>
             <h3>Confirm</h3>
             <p>Review the merchant, item, amount, order number, purchase date, and likely return deadline before saving.</p>
           </article>
-          <article class="step">
+          <article class="step" data-step="03">
             <span class="step-number">03</span>
+            <span class="step-label">Act</span>
             <h3>Prepare</h3>
             <p>Track proof, policy notes, packaging, drop-off decisions, and status from a dedicated Return Prep checklist.</p>
           </article>
-          <article class="step">
+          <article class="step" data-step="04">
             <span class="step-number">04</span>
+            <span class="step-label">Recover</span>
             <h3>Recover</h3>
             <p>Use deadline filters and reminders to act before a return window becomes missed money.</p>
           </article>
@@ -65,9 +97,23 @@
 
       <section class="band mist" aria-labelledby="product-title">
         <div class="proof-grid">
-          <div class="screenshot">
-            <img src="assets/share-import.jpg" alt="Return To capture screen with a shared Target receipt prefilled and parsed.">
-          </div>
+          <ol class="deadline-rail" aria-label="Return To workflow example">
+            <li>
+              <span class="rail-date">Jun 2</span>
+              <strong>Receipt shared</strong>
+              <p>Target order email opens directly into Capture Return.</p>
+            </li>
+            <li>
+              <span class="rail-date">Now</span>
+              <strong>Fields reviewed</strong>
+              <p>Merchant, amount, item, and order number are checked before saving.</p>
+            </li>
+            <li>
+              <span class="rail-date">Aug 31</span>
+              <strong>Window closes</strong>
+              <p>The return stays visible until it is recovered, expired, or dismissed.</p>
+            </li>
+          </ol>
           <div>
             <p class="eyebrow">Built for local review</p>
             <h2 id="product-title">The receipt lands where work happens.</h2>
@@ -94,6 +140,11 @@
         <div class="section-head">
           <h2 id="privacy-title">Privacy Policy</h2>
           <p>Last updated June 5, 2026. This policy covers the Return To iOS app, hosted review API, email forwarding flow, and this website.</p>
+        </div>
+        <div class="policy-summary" aria-label="Privacy summary">
+          <span>No ad tracking</span>
+          <span>No sale of personal data</span>
+          <span>User-selected receipts only</span>
         </div>
         <div class="policy-grid">
           <article class="policy-panel">
@@ -144,15 +195,19 @@
           <p>Use this for App Store support metadata and early user help while Return To is in review readiness.</p>
         </div>
         <div class="support-panel">
-          <h3>Contact</h3>
-          <p>Email <a href="mailto:scottolmer@gmail.com">scottolmer@gmail.com</a> with Return To support questions, privacy requests, bug reports, or receipt import issues.</p>
-          <h3>Helpful details to include</h3>
-          <ul>
-            <li>What you were trying to import: pasted receipt, photo, shared text, or forwarded email.</li>
-            <li>The merchant name and approximate purchase date.</li>
-            <li>Whether the issue happened locally, through forwarded email, or through hosted sync.</li>
-            <li>Any screenshot that does not expose sensitive payment information.</li>
-          </ul>
+          <div>
+            <h3>Contact</h3>
+            <p>Email <a href="mailto:scottolmer@gmail.com">scottolmer@gmail.com</a> with Return To support questions, privacy requests, bug reports, or receipt import issues.</p>
+          </div>
+          <div>
+            <h3>Helpful details to include</h3>
+            <ul>
+              <li>What you were trying to import: pasted receipt, photo, shared text, or forwarded email.</li>
+              <li>The merchant name and approximate purchase date.</li>
+              <li>Whether the issue happened locally, through forwarded email, or through hosted sync.</li>
+              <li>Any screenshot that does not expose sensitive payment information.</li>
+            </ul>
+          </div>
           <div class="anchor-card">
             Direct support URL for App Store Connect: <a href="support/">https://scottolmer.github.io/return-to-site/support/</a>
           </div>
